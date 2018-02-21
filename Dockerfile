@@ -21,7 +21,7 @@ RUN apt-get update && \
     ACCEPT_EULA=Y apt-get install -y msodbcsql && \
     echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile && \
     echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc && \ 
-    Rscript -e "install.packages('https://cran.rstudio.com/src/contrib/remotes_1.1.0.tar.gz')" && \
+    Rscript -e "install.packages('https://cran.r-project.org/src/contrib/Archive/remotes/remotes_1.1.0.tar.gz')" && \
     Rscript -e "remotes::install_version('rJava', version = '0.9-8', repos = 'https://cran.r-project.org')" && \
     Rscript -e "remotes::install_version('optparse', version = '1.4.4', repos = 'https://cran.r-project.org')" && \
     Rscript -e "remotes::install_version('lubridate', version = '1.6.0', repos = 'https://cran.r-project.org')" && \
